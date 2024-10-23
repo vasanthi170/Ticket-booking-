@@ -1,0 +1,89 @@
+def SingleTon(arg):
+    l = []
+    def inner():
+        if len(l) == 0:
+            obj = arg()
+            l.append(obj)
+        return l[0]
+    return inner
+
+@SingleTon
+class Amaran():
+    def __init__(self):
+        self.totaltic = 200
+    def Booking(self):
+        tic = int(input('Enter the Required Tickets:'))
+        if tic <= self.totaltic:
+            print('Tickets were booked successfully')
+            self.totaltic -= tic
+            print(f'Available Tickets are {self.totaltic}...')
+            print('Thank you')
+        else:
+            print('Tickets you required were not available!')
+
+@SingleTon
+class Goat():
+    def __init__(self):
+        self.totaltic = 300
+    def Booking(self):
+        tic = int(input('Enter the Required Tickets:'))
+        if tic <= self.totaltic:
+            print('Tickets were booked successfully')
+            self.totaltic -= tic
+            print(f'Available Tickets are {self.totaltic}...')
+            print('Thank you')
+        else:
+            print('Tickets you required were not available!')
+
+@SingleTon
+class Vettaiyan():
+    def __init__(self):
+        self.totaltic = 300
+    def Booking(self):
+        tic = int(input('Enter the Required Tickets:'))
+        if tic <= self.totaltic:
+            print('Tickets were booked successfully')
+            self.totaltic -= tic
+            print(f'Available Tickets are {self.totaltic}...')
+            print('Thank you')
+        else:
+            print('Tickets you required were not available!')
+
+@SingleTon
+class Ayalaan():
+    def __init__(self):
+        self.totaltic = 300
+    def Booking(self):
+        tic = int(input('Enter the Required Tickets:'))
+        if tic <= self.totaltic:
+            print('Tickets were booked successfully')
+            self.totaltic -= tic
+            print(f'Available Tickets are {self.totaltic}...')
+            print('Thank you')
+        else:
+            print('Tickets you required were not available!')
+
+
+def Bookmyshow():
+    print('1)Amaran \n2)Goat \n3)Vettaiyan \n4)Ayalaan')
+    mov = int(input('Enter your choice: '))
+    if mov == 1:
+        user = Amaran()
+        user.Booking()
+    elif mov == 2:
+        user = Goat()
+        user.Booking()
+    elif mov == 3:
+        user = Vettaiyan()
+        user.Booking()
+    elif mov == 4:
+        user = Ayalaan()
+        user.Booking()
+    else:
+        print('Movie was not available...')
+
+user1 = Bookmyshow()
+print('-'*20)
+user2 = Bookmyshow()
+    
+            
