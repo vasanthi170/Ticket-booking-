@@ -1,0 +1,37 @@
+def SingleTon(arg):
+    l = []
+    def inner():
+        if len(l) == 0:
+            obj = arg()
+            l.append(obj)
+        return l[0]
+    return inner
+
+@SingleTon
+class Amaran():
+    def __init__(self):
+        self.totaltic = 200
+    def Booking(self):
+        tic = int(input('Enter the Required Tickets:'))
+        if tic <= self.totaltic:
+            print('Tickets were booked successfully')
+            self.totaltic -= tic
+            print(f'Available Tickets are {self.totaltic}...')
+            print('Thank you')
+        else:
+            print('Tickets you required were not available!')
+
+def Bookmyshow():
+    user = Amaran()
+    user.Booking()
+
+def Paytm():
+    user = Amaran()
+    user.Booking()
+def Googlepay():
+    user = Amaran()
+    user.Booking()  
+
+user1 = Bookmyshow()
+print('-'*20)
+user2 = Paytm()
