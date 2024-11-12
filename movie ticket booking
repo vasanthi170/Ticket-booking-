@@ -6,7 +6,7 @@ def SingleTon(arg):
             l.append(obj)
         return l[0]
     return inner
- 
+  
 @SingleTon
 class Amaran():
     def __init__(self):
