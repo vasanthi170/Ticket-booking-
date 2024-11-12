@@ -7,7 +7,7 @@ def SingleTon(arg):
         return l[0]
     return inner
   
-@SingleTon
+@SingleTon 
 class Amaran():
     def __init__(self):
         self.totaltic = 200
